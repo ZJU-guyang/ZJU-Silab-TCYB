@@ -1,13 +1,21 @@
+%Copyright (c) 2025 Yang Gu
+
+%This code is provided for academic and non-commercial research purposes only.
+%Use, reproduction, or modification of this code for commercial purposes is prohibited without explicit written permission.
+
+%If you use this code in your work, please cite the following paper:
+%"Joint Time and Energy Efficient Routing Optimisation Framework for Offshore Wind Farm Inspection Using an Unmanned Surface Vehicles", IEEE Transactions on Cybernetics, under review.
+%Contact: yanggu[at]zju.edu.cn
 clc;clear;close all
-%% »ù±¾²ÎÊı
-nPop = 20; % ÖÖÈºÊı
-Max_iter = 1000; % ×î´óµü´ú´ÎÊı
-dim = 20; % cec2022º¯ÊıÎ¬¶ÈÖ»ÄÜÑ¡ 2, 10, 20
-run_times = 20; % Ëã·¨×ÜÔËĞĞ´ÎÊı
+%% åŸºæœ¬å‚æ•°
+nPop = 20; % ç§ç¾¤æ•°
+Max_iter = 1000; % æœ€å¤§è¿­ä»£æ¬¡æ•°
+dim = 20; % cec2022å‡½æ•°ç»´åº¦åªèƒ½é€‰ 2, 10, 20
+run_times = 20; % ç®—æ³•æ€»è¿è¡Œæ¬¡æ•°
 Function_name = 8;
 [lb,ub,dim,fobj] = Get_Functions_cec2022(Function_name,dim);
-%% µ÷ÓÃËã·¨²¿·Ö
-Optimal_results={}; % Optimal resultsÓÃÒÔ±£´æ½á¹û
+%% è°ƒç”¨ç®—æ³•éƒ¨åˆ†
+Optimal_results={}; % Optimal resultsç”¨ä»¥ä¿å­˜ç»“æœ
 for run_time=1:run_times
 
     [Best_score,Best_pos,cg_curve]=TOC(nPop,Max_iter,lb,ub,dim,fobj);
@@ -57,10 +65,10 @@ for run_time=1:run_times
     Optimal_results{4,7}(run_time,:)=Best_pos;
 end           
 figure(1);
-set(gcf, 'Color', 'w'); % °×É«±³¾°
+set(gcf, 'Color', 'w'); % ç™½è‰²èƒŒæ™¯
 hold on;
 
-% Ö¸¶¨µÄÑÕÉ«Ë³Ğò
+% æŒ‡å®šçš„é¢œè‰²é¡ºåº
 colors = [
     0,   1,   0;     % green
     0,   0,   0;     % black
@@ -73,12 +81,12 @@ colors = [
 
 for i = 1:size(Optimal_results, 2)
     c = colors(mod(i-1, size(colors,1)) + 1, :);
-    %semilogy(Optimal_results{2, i}(end,:),'Linewidth',1.5,'color',c) % Ñ¡ÔñÊÕÁ²ÇúÏß¶ÔÓ¦µÄÒ»ĞĞ
-    semilogy(mean(Optimal_results{2, i}),'Linewidth',1.5,'color',c) % Ñ¡ÔñÊÕÁ²ÇúÏß¶ÔÓ¦µÄÒ»ĞĞ
+    %semilogy(Optimal_results{2, i}(end,:),'Linewidth',1.5,'color',c) % é€‰æ‹©æ”¶æ•›æ›²çº¿å¯¹åº”çš„ä¸€è¡Œ
+    semilogy(mean(Optimal_results{2, i}),'Linewidth',1.5,'color',c) % é€‰æ‹©æ”¶æ•›æ›²çº¿å¯¹åº”çš„ä¸€è¡Œ
     hold on
 end
 
-% ÉèÖÃ×ø±êÖá·ç¸ñ
+% è®¾ç½®åæ ‡è½´é£æ ¼
 ax = gca;
 ax.FontName   = 'CMU Serif';
 ax.FontSize   = 16;
@@ -86,15 +94,15 @@ ax.TickLabelInterpreter = 'latex';
 ax.LineWidth  = 1.5;
 
 ax.YScale = 'log';
-ax.YAxis.Exponent = 3; % ²»×Ô¶¯ÉèÖÃÖ¸Êı
-ax.YTickLabelMode = 'auto';  % ÔÊĞíÊÖ¶¯¸ñÊ½»¯
-ax.YRuler.TickLabelFormat = '%.0f';  % Ç¿ÖÆ¿ÆÑ§¼ÆÊı·¨£¬e.g., 1e-2 -> 1¡Á10^{-2}
+ax.YAxis.Exponent = 3; % ä¸è‡ªåŠ¨è®¾ç½®æŒ‡æ•°
+ax.YTickLabelMode = 'auto';  % å…è®¸æ‰‹åŠ¨æ ¼å¼åŒ–
+ax.YRuler.TickLabelFormat = '%.0f';  % å¼ºåˆ¶ç§‘å­¦è®¡æ•°æ³•ï¼Œe.g., 1e-2 -> 1Ã—10^{-2}
 
 
 %ax.YAxis.Exponent = 0;
-%ax.YAxis.TickLabelFormat = '%.0f';  % ±ÜÃâÃ¿¸ö¿Ì¶È¶¼Ğ´ ¡Á10^x
-%ax.YRuler.Exponent = 3;             % ÏÔÊ¾Îª ¡Á10^3£¨¸ù¾İÄãµÄÊı¾İ·¶Î§Ñ¡Ôñ£©
-%ax.YAxis.TickLabelMode = 'auto';  % ×Ô¶¯Ä£Ê½¿ªÆôÊ±£¬½áºÏÉÏ·½ÉèÖÃĞ§¹û×î¼Ñ
+%ax.YAxis.TickLabelFormat = '%.0f';  % é¿å…æ¯ä¸ªåˆ»åº¦éƒ½å†™ Ã—10^x
+%ax.YRuler.Exponent = 3;             % æ˜¾ç¤ºä¸º Ã—10^3ï¼ˆæ ¹æ®ä½ çš„æ•°æ®èŒƒå›´é€‰æ‹©ï¼‰
+%ax.YAxis.TickLabelMode = 'auto';  % è‡ªåŠ¨æ¨¡å¼å¼€å¯æ—¶ï¼Œç»“åˆä¸Šæ–¹è®¾ç½®æ•ˆæœæœ€ä½³
 
 xlabel('Iterations', ...
       'FontName', 'CMU Serif', 'FontSize', 16, 'Interpreter', 'latex');
@@ -107,7 +115,7 @@ title(['Benchmark Function: F', num2str(Function_name)], ...
 xlim([0 Max_iter]);
 grid on; box on;
 
-% Ìí¼Ó legend
+% æ·»åŠ  legend
 lg = legend(Optimal_results(1,:), ...
     'Interpreter','latex', ...
     'FontName','CMU Serif', ...
@@ -115,26 +123,26 @@ lg = legend(Optimal_results(1,:), ...
     'Location','northeast');
 set(lg, 'Color', 'w');
 
-% ÉèÖÃÍ¼´°´óĞ¡
+% è®¾ç½®å›¾çª—å¤§å°
 set(gcf, 'Position', [100 100 600 400]);
 hold off;
-%% ¡ª¡ª¡ª¡ª ¼ÆËã²¢±£´æÆ½¾ùÖµºÍ±ê×¼²î ¡ª¡ª¡ª¡ª
+%% â€”â€”â€”â€” è®¡ç®—å¹¶ä¿å­˜å¹³å‡å€¼å’Œæ ‡å‡†å·® â€”â€”â€”â€”
 nAlgs = size(Optimal_results, 2);
 mean_scores = zeros(1, nAlgs);
 var_scores  = zeros(1, nAlgs);
 
 for i = 1:nAlgs
-    % ÌáÈ¡µÚ i ¸öËã·¨ËùÓĞ run µÄ×îÓÅÖµ (1¡Árun_times)
+    % æå–ç¬¬ i ä¸ªç®—æ³•æ‰€æœ‰ run çš„æœ€ä¼˜å€¼ (1Ã—run_times)
     scores = Optimal_results{3, i};
-    % ¼ÆËã
+    % è®¡ç®—
     mean_scores(i) = mean(scores);
-    var_scores(i)  = std(scores, 1);   % ÓÃ 1/N Çó·½²î£¬Ò²¿ÉÒÔÓÃ var(scores) Ä¬ÈÏ N-1
-    % ´æ»Ø Optimal_results£º
+    var_scores(i)  = std(scores, 1);   % ç”¨ 1/N æ±‚æ–¹å·®ï¼Œä¹Ÿå¯ä»¥ç”¨ var(scores) é»˜è®¤ N-1
+    % å­˜å› Optimal_resultsï¼š
     Optimal_results{5, i} = mean_scores(i);
     Optimal_results{6, i} = var_scores(i);
 end
 
-%% ¡ª¡ª¡ª¡ª ´òÓ¡»ã×Ü±í ¡ª¡ª¡ª¡ª
+%% â€”â€”â€”â€” æ‰“å°æ±‡æ€»è¡¨ â€”â€”â€”â€”
 alg_names   = Optimal_results(1, :)';
 mean_scores = mean_scores'; 
 var_scores  = var_scores';

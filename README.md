@@ -19,7 +19,10 @@ This repository includes:
 
 ## 📁 Folder Structure
 ZJU-Silab-TCYB/
+
 ├── RLAEGA.m # Our proposed RL-enhanced GA
+
+├── Learning_exp3.m.m # Learning the optimal enhancement strategies for GA
 
 ├── benchmark files # CEC2022 test functions
 

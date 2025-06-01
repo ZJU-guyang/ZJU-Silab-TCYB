@@ -18,4 +18,24 @@ This repository includes:
 - Supporting files for testing and performance evaluation (`test1.m`, `test2.m`, `best_combinations.csv`)
 
 ## 📁 Folder Structure
+ZJU-Silab-TCYB/
+├── RLAEGA.m # Our proposed RL-enhanced GA
+├── benchmark files # CEC2022 test functions
+├── mutation/crossover/... # Operator variants
+├── baseline algorithms # GA, NRBO, TOC, SFOA, etc.
+├── test1.m, test2.m # Test scripts
+├── README.md # This file
 
+## ⚠️ License & Usage
+
+This repository is shared **for academic and non-commercial use only**.  
+If you use this code or any part of the framework, **please cite our paper** as follows:
+
+> Yang Gu, Shujie Yang, Weibo Zhong, Zili Tang, and Yunlin Si,  
+> "*Joint Time and Energy Efficient Routing Optimisation Framework for Offshore Wind Farm Inspection Using an Unmanned Surface Vehicles*,"  
+> *IEEE Transactions on Cybernetics*, under review, 2025.
+
+## 📧 Contact
+For questions, please contact:  
+**Yang Gu**, ZJU-Silab  or **YulinSi**, ZJU-Silab
+Email: `yanggu[at]zju.edu.cn`, `Yulinsi[at]zju.edu.cn`

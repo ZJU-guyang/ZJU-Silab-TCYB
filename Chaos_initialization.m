@@ -1,17 +1,14 @@
-% This function initialize the first population of search agents
-%% ¹Ø×¢Î¢ĞÅ¹«ÖÚºÅ£ºÓÅ»¯Ëã·¨ÏÀ   Swarm-Opti
-% https://mbd.pub/o/author-a2mVmGpsYw==
 function Positions=Chaos_initialization(SearchAgents_no,dim,ub,lb,index)
-% index ÓÃÓÚÑ¡Ôñ¶ÔÓ¦µÄ»ìãçº¯Êı 
+% index ç”¨äºé€‰æ‹©å¯¹åº”çš„æ··æ²Œå‡½æ•° 
 lb=lb.*ones(1,dim);
 ub=ub.*ones(1,dim);
 
 for  i=1:dim
     ub_i=ub(i);
     lb_i=lb(i);
-    chaos_value= chaos(index,rand(1),SearchAgents_no); % Éú³É»ìãçÖµ
-    if index==17 % henon Ó³ÉäÔÚ£¨-1.5£¬1.5£©£¬½ÏÎªÌØÊâ£¬Èç¹ûchaos.mÀï¸ü¸ÄÁËhenon Ó³ÉäµÄĞòºÅ£¬ÕâÀïÒ²ÒªÒ»ÆğĞŞ¸Ä
-        chaos_value = mapminmax(chaos_value,0,1); % ²ÉÓÃÁË¹éÒ»»¯´¦Àí
+    chaos_value= chaos(index,rand(1),SearchAgents_no); % ç”Ÿæˆæ··æ²Œå€¼
+    if index==17 % henon æ˜ å°„åœ¨ï¼ˆ-1.5ï¼Œ1.5ï¼‰ï¼Œè¾ƒä¸ºç‰¹æ®Šï¼Œå¦‚æœchaos.mé‡Œæ›´æ”¹äº†henon æ˜ å°„çš„åºå·ï¼Œè¿™é‡Œä¹Ÿè¦ä¸€èµ·ä¿®æ”¹
+        chaos_value = mapminmax(chaos_value,0,1); % é‡‡ç”¨äº†å½’ä¸€åŒ–å¤„ç†
         Positions(:,i)=chaos_value.*(ub_i-lb_i)+lb_i;
     else        
         Positions(:,i)=abs(chaos_value).*(ub_i-lb_i)+lb_i;

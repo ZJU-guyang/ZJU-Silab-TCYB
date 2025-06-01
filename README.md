@@ -23,19 +23,20 @@ ZJU-Silab-TCYB/
 
 ├── benchmark files # CEC2022 test functions
 
-├── mutation/crossover/... # Operator variants
+├── mutation/crossover/... # Strategy operator
 
-├── baseline algorithms # GA, NRBO, TOC, SFOA, etc.
+├── compared algorithms # GA, NRBO, TOC, SFOA, etc.
 
 ├── test1.m, test2.m # Test scripts
 
 ├── README.md # This file
 
 ## 🔐 Access Policy of the proposed RLAEGA
-The proposed RLAEGA is currently private during the manuscript review stage.
+The proposed RLAEGA and joint optitimsation framework is currently private during the manuscript review stage.
 If you are an editor or reviewer and wish to access the code, please contact the corresponding author:  
 📧 yanggu@zju.edu.cn or yulinsi@zju.edu.cn
-The code will be released publicly after acceptance.
+
+The complete code will be released publicly after acceptance.
 
 ## ⚠️ License & Usage
 This repository is shared **for academic and non-commercial use only**.  

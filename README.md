@@ -37,5 +37,5 @@ If you use this code or any part of the framework, **please cite our paper** as 
 
 ## 📧 Contact
 For questions, please contact:  
-**Yang Gu**, ZJU-Silab  or **YulinSi**, ZJU-Silab
+**Yang Gu**, ZJU-Silab  or **YulinSi**, ZJU-Silab;
 Email: `yanggu[at]zju.edu.cn`, `Yulinsi[at]zju.edu.cn`

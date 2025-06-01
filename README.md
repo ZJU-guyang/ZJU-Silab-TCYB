@@ -26,8 +26,14 @@ ZJU-Silab-TCYB/
 ├── test1.m, test2.m # Test scripts
 ├── README.md # This file
 
-## ⚠️ License & Usage
 
+## 🔐 Access Policy of the proposed RLAEGA
+This repository is currently private during the manuscript review stage.
+If you are an editor or reviewer and wish to access the code, please contact the corresponding author:  
+📧 yanggu@zju.edu.cn or yulinsi@zju.edu.cn
+The code will be released publicly after acceptance.
+
+## ⚠️ License & Usage
 This repository is shared **for academic and non-commercial use only**.  
 If you use this code or any part of the framework, **please cite our paper** as follows:
 

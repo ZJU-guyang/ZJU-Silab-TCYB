@@ -1,3 +1,12 @@
+%Copyright (c) 2025 Yang Gu
+
+%This code is provided for academic and non-commercial research purposes only.
+%Use, reproduction, or modification of this code for commercial purposes is prohibited without explicit written permission.
+
+%If you use this code in your work, please cite the following paper:
+%"Joint Time and Energy Efficient Routing Optimisation Framework for Offshore Wind Farm Inspection Using an Unmanned Surface Vehicles", IEEE Transactions on Cybernetics, under review.
+%Contact: yanggu[at]zju.edu.cn
+
 function Positions=Chaos_initialization(SearchAgents_no,dim,ub,lb,index)
 % index 用于选择对应的混沌函数 
 lb=lb.*ones(1,dim);

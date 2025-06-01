@@ -1,6 +1,14 @@
+%Copyright (c) 2025 Yang Gu
+
+%This code is provided for academic and non-commercial research purposes only.
+%Use, reproduction, or modification of this code for commercial purposes is prohibited without explicit written permission.
+
+%If you use this code in your work, please cite the following paper:
+%"Joint Time and Energy Efficient Routing Optimisation Framework for Offshore Wind Farm Inspection Using an Unmanned Surface Vehicles", IEEE Transactions on Cybernetics, under review.
+%Contact: yanggu[at]zju.edu.cn
 function O=chaos(index,Initial_Value,N)
-% ³õÊ¼Öµ Initial_Value ¿ÉÒÔÑ¡Ôñ0ºÍ1Ö®¼äµÄÈÎÒâÊı×Ö (»ò-1ºÍ1 , È¡¾öÓÚ»ìãçÓ³ÉäµÄ·¶Î§)
-% µ«ÊÇ£¬ĞèÒª×¢ÒâµÄÊÇ£¬³õÊ¼Öµ¿ÉÄÜ»á¶ÔÄ³Ğ©»ìãçÍ¼µÄ²¨¶¯Ä£Ê½²úÉúÖØ´óÓ°Ïì
+% åˆå§‹å€¼ Initial_Value å¯ä»¥é€‰æ‹©0å’Œ1ä¹‹é—´çš„ä»»æ„æ•°å­— (æˆ–-1å’Œ1 , å–å†³äºæ··æ²Œæ˜ å°„çš„èŒƒå›´)
+% ä½†æ˜¯ï¼Œéœ€è¦æ³¨æ„çš„æ˜¯ï¼Œåˆå§‹å€¼å¯èƒ½ä¼šå¯¹æŸäº›æ··æ²Œå›¾çš„æ³¢åŠ¨æ¨¡å¼äº§ç”Ÿé‡å¤§å½±å“
 % O=zeros(1,N);
 x(1)=Initial_Value;
 switch index

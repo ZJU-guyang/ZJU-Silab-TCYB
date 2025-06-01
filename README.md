@@ -20,15 +20,20 @@ This repository includes:
 ## 📁 Folder Structure
 ZJU-Silab-TCYB/
 ├── RLAEGA.m # Our proposed RL-enhanced GA
+
 ├── benchmark files # CEC2022 test functions
+
 ├── mutation/crossover/... # Operator variants
+
 ├── baseline algorithms # GA, NRBO, TOC, SFOA, etc.
+
 ├── test1.m, test2.m # Test scripts
+
 ├── README.md # This file
 
 
 ## 🔐 Access Policy of the proposed RLAEGA
-This repository is currently private during the manuscript review stage.
+the proposed RLAEGA is currently private during the manuscript review stage.
 If you are an editor or reviewer and wish to access the code, please contact the corresponding author:  
 📧 yanggu@zju.edu.cn or yulinsi@zju.edu.cn
 The code will be released publicly after acceptance.

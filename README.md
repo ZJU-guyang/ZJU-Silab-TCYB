@@ -31,9 +31,8 @@ ZJU-Silab-TCYB/
 
 ├── README.md # This file
 
-
 ## 🔐 Access Policy of the proposed RLAEGA
-the proposed RLAEGA is currently private during the manuscript review stage.
+The proposed RLAEGA is currently private during the manuscript review stage.
 If you are an editor or reviewer and wish to access the code, please contact the corresponding author:  
 📧 yanggu@zju.edu.cn or yulinsi@zju.edu.cn
 The code will be released publicly after acceptance.
@@ -46,7 +45,3 @@ If you use this code or any part of the framework, **please cite our paper** as 
 > "*Joint Time and Energy Efficient Routing Optimisation Framework for Offshore Wind Farm Inspection Using an Unmanned Surface Vehicles*,"  
 > *IEEE Transactions on Cybernetics*, under review, 2025.
 
-## 📧 Contact
-For questions, please contact:  
-**Yang Gu**, ZJU-Silab  or **YulinSi**, ZJU-Silab;
-Email: `yanggu[at]zju.edu.cn`, `Yulinsi[at]zju.edu.cn`

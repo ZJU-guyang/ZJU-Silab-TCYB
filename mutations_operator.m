@@ -1,3 +1,11 @@
+%Copyright (c) 2025 Yang Gu
+
+%This code is provided for academic and non-commercial research purposes only.
+%Use, reproduction, or modification of this code for commercial purposes is prohibited without explicit written permission.
+
+%If you use this code in your work, please cite the following paper:
+%"Joint Time and Energy Efficient Routing Optimisation Framework for Offshore Wind Farm Inspection Using an Unmanned Surface Vehicles", IEEE Transactions on Cybernetics, under review.
+%Contact: yanggu[at]zju.edu.cn
 function mx=mutations_operator(x,x_all,xbest,lb,ub,dim,iter,max_iter,index)
 % 输入：
 % x        变异前的个体，一维

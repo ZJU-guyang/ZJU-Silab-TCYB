@@ -34,8 +34,8 @@ ZJU-Silab-TCYB/
 
 ├── README.md # This file
 
-## 🔐 Access Policy of the proposed RLAEGAA and joint optitimsation framework
-The proposed RLAEGA and joint optitimsation framework is currently private during the manuscript review stage.
+## 🔐 Access Policy of the proposed RLAEGAA and joint optimisation framework
+The proposed RLAEGA and joint optimisation framework is currently private during the manuscript review stage.
 If you are an editor or reviewer and wish to access the code, please contact the corresponding author:  
 📧 yanggu@zju.edu.cn or yulinsi@zju.edu.cn
 

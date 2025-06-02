@@ -4,7 +4,7 @@ This repository provides the source code and benchmark materials for the manuscr
 
 **"Joint Time and Energy Efficient Routing Optimisation Framework for Offshore Wind Farm Inspection Using an Unmanned Surface Vehicles"**  
 Submitted to *IEEE Transactions on Cybernetics*  
-Authors: Yang Gu, Shujie Yang, Weibo Zhong, Zili Tang, and Yunlin Si
+Authors: Yang Gu, Shujie Yang, Weibo Zhong, Zili Tang, and Yulin Si
 
 ## 🔍 Description
 
